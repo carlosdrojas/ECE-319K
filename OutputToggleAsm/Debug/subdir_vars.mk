@@ -12,7 +12,7 @@ S_SRCS += \
 ../Toggle.s 
 
 C_SRCS += \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.c 
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.c 
 
 S_DEPS += \
 ./Toggle.d 
@@ -35,7 +35,7 @@ S_DEPS__QUOTED += \
 "Toggle.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.c" 
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.c" 
 
 S_SRCS__QUOTED += \
 "../Toggle.s" 

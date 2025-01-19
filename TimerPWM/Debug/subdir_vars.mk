@@ -9,9 +9,9 @@ CMD_SRCS += \
 ../mspm0g3507.cmd 
 
 C_SRCS += \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/PWM.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Clock.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/PWM.c \
 ../TimerPWMmain.c 
 
 C_DEPS += \
@@ -39,9 +39,9 @@ C_DEPS__QUOTED += \
 "TimerPWMmain.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/PWM.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Clock.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/PWM.c" \
 "../TimerPWMmain.c" 
 
 

@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 eclipse.preferences.version=1
 org.eclipse.cdt.debug.core.toggleBreakpointModel=com.ti.ccstudio.debug.CCSBreakpointMarker
-=======
-eclipse.preferences.version=1
-org.eclipse.cdt.debug.core.toggleBreakpointModel=com.ti.ccstudio.debug.CCSBreakpointMarker
->>>>>>> 7fa97aa524a5556a34dbd8876f415d17eecbbff5

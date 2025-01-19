@@ -16,13 +16,13 @@ S_SRCS += \
 ../StringConversion.s 
 
 C_SRCS += \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Clock.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Clock.c \
 ../Lab6Grader.c \
 ../Lab6Main.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/SPI.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/ST7735.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Timer.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/SPI.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/ST7735.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Timer.c \
 ../UART.c \
 ../UARTbusywait.c 
 
@@ -87,13 +87,13 @@ S_SRCS__QUOTED += \
 "../StringConversion.s" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Clock.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Clock.c" \
 "../Lab6Grader.c" \
 "../Lab6Main.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/SPI.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/ST7735.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Timer.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/SPI.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/ST7735.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Timer.c" \
 "../UART.c" \
 "../UARTbusywait.c" 
 

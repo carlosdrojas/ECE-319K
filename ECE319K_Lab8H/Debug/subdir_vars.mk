@@ -6,15 +6,15 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Clock.cpp \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/FIFO2.cpp \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Clock.cpp \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/FIFO2.cpp \
 ../IRxmt.cpp \
 ../Lab8HMain.cpp \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.cpp \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/SPI.cpp \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/ST7735.cpp \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/SlidePot.cpp \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Timer.cpp \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.cpp \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/SPI.cpp \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/ST7735.cpp \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/SlidePot.cpp \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Timer.cpp \
 ../UART2.cpp 
 
 CMD_SRCS += \
@@ -69,15 +69,15 @@ CPP_DEPS__QUOTED += \
 "UART2.d" 
 
 CPP_SRCS__QUOTED += \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Clock.cpp" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/FIFO2.cpp" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Clock.cpp" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/FIFO2.cpp" \
 "../IRxmt.cpp" \
 "../Lab8HMain.cpp" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.cpp" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/SPI.cpp" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/ST7735.cpp" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/SlidePot.cpp" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Timer.cpp" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.cpp" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/SPI.cpp" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/ST7735.cpp" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/SlidePot.cpp" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Timer.cpp" \
 "../UART2.cpp" 
 
 

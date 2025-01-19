@@ -12,15 +12,15 @@ O_SRCS += \
 ../myFifo.o 
 
 C_SRCS += \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/ADC1.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Clock.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/FIFO1.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/ADC1.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Clock.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/FIFO1.c \
 ../Lab8Main.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/SPI.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/ST7735.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/TExaS.c \
-C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Timer.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/SPI.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/ST7735.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/TExaS.c \
+E:/Box/Box\ Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Timer.c \
 ../UART1.c \
 ../UART2.c 
 
@@ -77,15 +77,15 @@ C_DEPS__QUOTED += \
 "UART2.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/ADC1.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Clock.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/FIFO1.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/ADC1.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Clock.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/FIFO1.c" \
 "../Lab8Main.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/LaunchPad.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/SPI.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/ST7735.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/TExaS.c" \
-"C:/Users/Carlos/Documents/School/UT/spring25/ECE319K/MSPM0_ValvanoWare/inc/Timer.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/LaunchPad.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/SPI.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/ST7735.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/TExaS.c" \
+"E:/Box/Box Sync/ECE319K/MSPM0Software/MSPM0_ValvanoWare/inc/Timer.c" \
 "../UART1.c" \
 "../UART2.c" 
 
