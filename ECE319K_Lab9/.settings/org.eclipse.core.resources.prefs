@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eclipse.preferences.version=1
 encoding//Debug/images/pipedreams/subdir_rules.mk=UTF-8
 encoding//Debug/images/pipedreams/subdir_vars.mk=UTF-8
@@ -12,3 +13,19 @@ encoding//Debug/subdir_rules.mk=UTF-8
 encoding//Debug/subdir_vars.mk=UTF-8
 encoding//Debug/ticlang/subdir_rules.mk=UTF-8
 encoding//Debug/ticlang/subdir_vars.mk=UTF-8
+=======
+eclipse.preferences.version=1
+encoding//Debug/images/pipedreams/subdir_rules.mk=UTF-8
+encoding//Debug/images/pipedreams/subdir_vars.mk=UTF-8
+encoding//Debug/images/subdir_rules.mk=UTF-8
+encoding//Debug/images/subdir_vars.mk=UTF-8
+encoding//Debug/makefile=UTF-8
+encoding//Debug/objects.mk=UTF-8
+encoding//Debug/sounds/subdir_rules.mk=UTF-8
+encoding//Debug/sounds/subdir_vars.mk=UTF-8
+encoding//Debug/sources.mk=UTF-8
+encoding//Debug/subdir_rules.mk=UTF-8
+encoding//Debug/subdir_vars.mk=UTF-8
+encoding//Debug/ticlang/subdir_rules.mk=UTF-8
+encoding//Debug/ticlang/subdir_vars.mk=UTF-8
+>>>>>>> 7fa97aa524a5556a34dbd8876f415d17eecbbff5

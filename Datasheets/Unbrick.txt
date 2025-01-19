@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Recovery Action 3. Force BSL with physical Reset:
 
@@ -5,3 +6,12 @@ Recovery Action 3. Force BSL with physical Reset:
     The device should go to BSL and stay in Active mode for ~10secs.
     Attempt to program immediately after releasing reset.
 
+=======
+
+Recovery Action 3. Force BSL with physical Reset:
+
+    Press-and-hold the BSL_Invoke button (S2, near LED) while pressing and releasing the Reset button.
+    The device should go to BSL and stay in Active mode for ~10secs.
+    Attempt to program immediately after releasing reset.
+
+>>>>>>> 7fa97aa524a5556a34dbd8876f415d17eecbbff5
