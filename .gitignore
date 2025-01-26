@@ -1,62 +1,56 @@
-# Prerequisites
-*.d
+# General OS Files
+.DS_Store
+Thumbs.db
+*.Spotlight-V100
+*.Trashes
+Desktop.ini
+Icon?
+._*
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# General IDE and Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-workspace_ccstheia/
-*.obj
-*.out
-*.map
+# Code Composer Studio (CCS) and Build Artifacts
 Debug/
 Release/
-.metadata/
-.cproject
-.project
+*/Debug/
+*/Release/
+*.mk
+*.opt
+*.map
+*.o
+*.d
+*.obj
+*.pp
+*.lst
+*.out
+*.bin
+*.elf
+*.hex
+*.ini
+*.cmd
+*.log
+*.cache
+build/
+
+# Clang and Compilation Cache
+.clangd/
+compile_commands.json
+
+# Logs and Temporary Files
+*.log
+*.tmp
+
+# TI Toolchain-Specific Directories
+*/ticlang/
+
+# Platform-Specific Executables
+*.exe   
+# Windows executables
+*.dSYM/ 
+# macOS debug symbols
