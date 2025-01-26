@@ -1,7 +1,7 @@
 //****************** ECE319K_Lab1.s ***************
 // Your solution to Lab 1 in assembly code
-// Author: Your name
-// Last Modified: Your date
+// Author: Carlos Rojas
+// Last Modified: 12-26-2024
 // Spring 2025
         .data
         .align 2
