@@ -35,18 +35,13 @@ Lab1: PUSH {R4-R7,LR}
         
         MOVS R3, #0 //set counter to 0
         LDR R4,=EID 
-        //loading EID ptr in R4
+                //loading EID ptr in R4
         LDR R1, [R0] // Loading list EID ptr into R1
-
         CMP R1, #0 // checking if list is empty
-        BEQ empty
+        BEQ empty 
 
 loop:   LDRB R2, [R1] // loading first char of EID list ptr into R2
-        //ADDS R1, #1
-        //CMP R2, #0
-        // BEQ return
         LDRB R5, [R4] // loading first char of EID
-        //ADDS R4, #1
         CMP R2, R5 // checking if EID and listEID char are same
         BNE nx_eid // if chars not same, go to next struct and inc 
         CMP R5, #0 // comparing EID char and 0 (means reached end of string)
@@ -58,22 +53,24 @@ loop:   LDRB R2, [R1] // loading first char of EID list ptr into R2
 
         B loop
 
-nx_eid: ADDS R0, #8
-        ADDS R3, #1
-        LDR R1, [R0]
-        CMP R1, #0 // checking if list is empty
-        BEQ empty
+// next EID - incrementing struct array pointer and index counter,
+//            also checking if reached end of array without match
+nx_eid: ADDS R0, #8 // skipping current array ptr and score
+        ADDS R3, #1 // ++index
+        LDR R1, [R0] // loading string ptr value
+        CMP R1, #0 // checking if list is empty (string ptr value is 0)
+        BEQ empty // end of string w no match found
         LDR R4, =EID 
+                // loading back EID
         B loop
 
-ch_sm:  MOVS R0, R3
+ch_sm:  MOVS R0, R3 // copying index value into return register
         B return
 
-
-empty:  LDR R0, =-1
+empty:  LDR R0, =-1 
+                //declaring no match found return value
         B return
 
-        
 return: 
         POP  {R4-R7,PC} // return
 
