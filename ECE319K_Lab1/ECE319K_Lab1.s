@@ -12,11 +12,11 @@
         .thumb
         .align 2
         .global EID
-EID:    .string "ZZZ123" // replace ZZZ123 with your EID here
+EID:    .string "CDR3585" // replace ZZZ123 with your EID here
 
         .global Phase
         .align 2
-Phase:  .long 0 
+Phase:  .long 3
 // Phase= 0 will display your objective and some of the test cases, 
 // Phase= 1 to 5 will run one test case (the ones you have been given)
 // Phase= 6 to 7 will run one test case (the inputs you have not been given)
@@ -26,10 +26,21 @@ Phase:  .long 0
 // Return: R0 as specified in Lab 1 assignment and terminal window
 // According to AAPCS, you must save/restore R4-R7
 // If your function calls another function, you must save/restore LR
+
+// Prompt: Return R0 = index value of your EID, return R0 = -1 if your EID is not in the list.
+// Note - When Lab 1 program is called, R0 is passed with a pointer to the list of students.
+
 Lab1: PUSH {R4-R7,LR}
-       // your solution goes here
-       
-      POP  {R4-R7,PC} // return
+        // your solution goes here
+        
+        MOVS R3, #0 //set counter to 0
+        LDR R4 ,=EID 
+        //loading EID ptr in R4
+        LDR R1, [R0] // Loading list EID ptr into R1
+        LDRB R2, [R1] // loading first char of EID ptr into R2
+        
+        
+        POP  {R4-R7,PC} // return
 
 
         .align 2
