@@ -16,7 +16,7 @@ EID:    .string "CDR3585" // replace ZZZ123 with your EID here
 
         .global Phase
         .align 2
-Phase:  .long 3
+Phase:  .long 10
 // Phase= 0 will display your objective and some of the test cases, 
 // Phase= 1 to 5 will run one test case (the ones you have been given)
 // Phase= 6 to 7 will run one test case (the inputs you have not been given)
@@ -34,15 +34,50 @@ Lab1: PUSH {R4-R7,LR}
         // your solution goes here
         
         MOVS R3, #0 //set counter to 0
-        LDR R4 ,=EID 
+        LDR R4,=EID 
         //loading EID ptr in R4
         LDR R1, [R0] // Loading list EID ptr into R1
-        LDRB R2, [R1] // loading first char of EID ptr into R2
+
+        CMP R1, #0 // checking if list is empty
+        BEQ empty
+
+loop:   LDRB R2, [R1] // loading first char of EID list ptr into R2
+        //ADDS R1, #1
+        //CMP R2, #0
+        // BEQ return
+        LDRB R5, [R4] // loading first char of EID
+        //ADDS R4, #1
+        CMP R2, R5 // checking if EID and listEID char are same
+        BNE nx_eid // if chars not same, go to next struct and inc 
+        CMP R5, #0 // comparing EID char and 0 (means reached end of string)
+        BEQ ch_sm // if equal, return index
         
+        // incrementing string ptrs
+        ADDS R1, #1
+        ADDS R4, #1
+
+        B loop
+
+nx_eid: ADDS R0, #8
+        ADDS R3, #1
+        LDR R1, [R0]
+        CMP R1, #0 // checking if list is empty
+        BEQ empty
+        LDR R4, =EID 
+        B loop
+
+ch_sm:  MOVS R0, R3
+        B return
+
+
+empty:  LDR R0, =-1
+        B return
+
         
+return: 
         POP  {R4-R7,PC} // return
 
-
+/*
         .align 2
         .global myClass
 myClass: .long pAB123  // pointer to EID
@@ -56,4 +91,5 @@ myClass: .long pAB123  // pointer to EID
 pAB123:  .string "AB123"
 pXYZ1:   .string "XYZ1"
 pAB5549: .string "AB5549"
+*/
         .end
