@@ -90,3 +90,5 @@ pXYZ1:   .string "XYZ1"
 pAB5549: .string "AB5549"
 */
         .end
+
+        LSLS R0, R1, 2
