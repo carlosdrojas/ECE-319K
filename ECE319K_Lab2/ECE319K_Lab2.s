@@ -16,7 +16,7 @@
         .thumb
         .align 2
         .global EID
-EID:    .string "ZZZ123" // replace ZZZ123 with your EID here
+EID:    .string "CDR3585" // replace ZZZ123 with your EID here
         .align 2
 
 // this allow your Lab2 programs to the Lab2 grader
