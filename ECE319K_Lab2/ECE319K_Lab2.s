@@ -39,7 +39,7 @@ Lab2:
 //   configure interrupts  on TIMERG0 for grader or TIMERG7 for TExaS
 //   initialize ADC0 PB20 for scope,
 //   initialize UART0 for grader or TExaS
-     MOVS R0,#3
+     MOVS R0,#1
 // 0 for info,
 // 1 debug with logic analyzer,
 // 2 debug with scope,
@@ -50,11 +50,11 @@ Lab2:
      BL   Lab2Init
 
 loop:
-        LDR R0, =800000
+        LDR R0, =8000000
         BL LED_On
         BL Delay
         BL LED_Off
-        LDR R0, =800000
+        LDR R0, =8000000
         BL Delay
         B loop
 
