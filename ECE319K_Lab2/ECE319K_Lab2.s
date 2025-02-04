@@ -39,7 +39,7 @@ Lab2:
 //   configure interrupts  on TIMERG0 for grader or TIMERG7 for TExaS
 //   initialize ADC0 PB20 for scope,
 //   initialize UART0 for grader or TExaS
-     MOVS R0,#1
+     MOVS R0,#10
 // 0 for info,
 // 1 debug with logic analyzer,
 // 2 debug with scope,
@@ -50,11 +50,12 @@ Lab2:
      BL   Lab2Init
 
 loop:
-        LDR R0, =80000
+        // 15 duty
+        LDR R0, =860000 
         BL LED_On
         BL Delay
         BL LED_Off
-        LDR R0, =80000
+        LDR R0, =700000
         BL Delay
 
 
@@ -67,6 +68,7 @@ ml1:    BL Switch_I // switch was pressed
         CMP R0, #0 // was switch let go?
         BNE ml1 // no, mini loop 1
 
+        // 35 duty
 iloop1: LDR R0, =10000000
         BL LED_On
         BL Delay
@@ -84,11 +86,12 @@ ml2:    BL Switch_I // switch was pressed
         BNE ml2 // no, mini loop 2
 
 
-iloop2: LDR R0, =50000000
+        // 55 duty good
+iloop2: LDR R0, =860000
         BL LED_On
         BL Delay
         BL LED_Off
-        LDR R0, =50000000
+        LDR R0, =700000
         BL Delay
 
         BL Switch_I // checking if switch is pressed 
@@ -101,6 +104,7 @@ ml3:    BL Switch_I // switch was pressed
         BNE ml3 // no, mini loop 2
 
 
+        // 75 duty
 iloop3: LDR R0, =100000000
         BL LED_On
         BL Delay
