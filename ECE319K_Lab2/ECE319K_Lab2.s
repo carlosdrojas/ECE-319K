@@ -50,12 +50,74 @@ Lab2:
      BL   Lab2Init
 
 loop:
-        LDR R0, =8000000
+        LDR R0, =80000
         BL LED_On
         BL Delay
         BL LED_Off
-        LDR R0, =8000000
+        LDR R0, =80000
         BL Delay
+
+
+        BL Switch_I // checking if switch is pressed 
+        CMP R0, #0 // comparing to not pressed state
+        BEQ loop // switch was not pressed, loop again
+        LDR R0, =90000
+        BL Delay // wait 10ms
+ml1:    BL Switch_I // switch was pressed
+        CMP R0, #0 // was switch let go?
+        BNE ml1 // no, mini loop 1
+
+iloop1: LDR R0, =10000000
+        BL LED_On
+        BL Delay
+        BL LED_Off
+        LDR R0, =10000000
+        BL Delay
+
+        BL Switch_I // checking if switch is pressed 
+        CMP R0, #0 // comparing to not pressed state
+        BEQ iloop1 // switch was not pressed, loop again
+        LDR R0, =90000
+        BL Delay // wait 10ms
+ml2:    BL Switch_I // switch was pressed
+        CMP R0, #0 // was switch let go?
+        BNE ml2 // no, mini loop 2
+
+
+iloop2: LDR R0, =50000000
+        BL LED_On
+        BL Delay
+        BL LED_Off
+        LDR R0, =50000000
+        BL Delay
+
+        BL Switch_I // checking if switch is pressed 
+        CMP R0, #0 // comparing to not pressed state
+        BEQ iloop2 // switch was not pressed, loop again
+        LDR R0, =90000
+        BL Delay // wait 10ms
+ml3:    BL Switch_I // switch was pressed
+        CMP R0, #0 // was switch let go?
+        BNE ml3 // no, mini loop 2
+
+
+iloop3: LDR R0, =100000000
+        BL LED_On
+        BL Delay
+        BL LED_Off
+        LDR R0, =100000000
+        BL Delay
+
+        BL Switch_I // checking if switch is pressed 
+        CMP R0, #0 // comparing to not pressed state
+        BEQ iloop3 // switch was not pressed, loop again
+        LDR R0, =90000
+        BL Delay // wait 10ms
+ml4:    BL Switch_I // switch was pressed
+        CMP R0, #0 // was switch let go?
+        BNE ml4 // no, mini loop 2
+
+
         B loop
 
 LED_On:
@@ -71,6 +133,19 @@ LED_Off:
         LDR R1,=GPIOB_DOUTCLR31_0
         STR R2,[R1]  // PB1=0
         BX LR
+
+Switch_I:
+//loop2:  
+        LDR R1,=GPIOB_DIN31_0
+        LDR R3,=0x02
+        // mask for bit 1
+        LDR R0,[R1]  // all of GPIOB
+        ANDS R0,R0,R3 // just bit 1
+        BX LR
+
+// Switch_Up:
+
+
 
 Delay:
         SUBS R0, R0, #2
