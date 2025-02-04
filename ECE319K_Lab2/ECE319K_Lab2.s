@@ -39,7 +39,7 @@ Lab2:
 //   configure interrupts  on TIMERG0 for grader or TIMERG7 for TExaS
 //   initialize ADC0 PB20 for scope,
 //   initialize UART0 for grader or TExaS
-     MOVS R0,#0
+     MOVS R0,#3
 // 0 for info,
 // 1 debug with logic analyzer,
 // 2 debug with scope,
@@ -48,14 +48,37 @@ Lab2:
      BL   Lab2Grader
      BL   Debug_Init // your Lab3 (ignore this line while doing Lab 2)
      BL   Lab2Init
-loop:
 
-        LDR R0, =80000
+loop:
+        LDR R0, =800000
+        BL LED_On
+        BL Delay
+        BL LED_Off
+        LDR R0, =800000
         BL Delay
         B loop
 
+LED_On:
+        LDR R2, =65536 
+        // mask for bit 16
+        LDR  R1,=GPIOB_DOUTSET31_0
+        STR  R2,[R1]  // PB1=1
+        BX LR
+
+LED_Off:
+        LDR R2, =65536 
+        // mask for bit 16
+        LDR R1,=GPIOB_DOUTCLR31_0
+        STR R2,[R1]  // PB1=0
+        BX LR
+
 Delay:
-        SUBS
+        SUBS R0, R0, #2
+dloop:
+        SUBS R0, R0, #4
+        NOP
+        BHS dloop
+        BX LR
 
 // make switch an input, LED an output
 // PortB is already reset and powered
@@ -63,8 +86,31 @@ Delay:
 // Set GPIOB_DOE31_0 for your output (be friendly)
 Lab2Init:
 // ***do not reset/power Port A or Port B, already done****
-         
-   BX   LR
+        PUSH {LR}
+        BL PB1_Init
+        BL PB16_Init
+        POP {PC}
+        // BX   LR
+
+PB1_Init: // PB1 input
+        LDR  R1,=IOMUXPB1 
+        // PINCM
+        LDR  R0,=0x00040081   
+        STR  R0,[R1] // GPIO input
+        BX   LR
+
+PB16_Init: // PB16 output
+        MOVS R1,#0x81   
+        LDR  R0,=IOMUXPB16 
+        // PINCM
+        STR  R1,[R0]   // PB1 is GPIO
+        LDR  R0,=GPIOB_DOE31_0
+        LDR  R1,[R0]   // previous
+        MOVS R2,#0x02  // mask
+        LDR R2, =65536
+        ORRS R1,R1,R2  // friendly
+        STR  R1,[R0]   // enable out
+        BX   LR
 
 
    .end
