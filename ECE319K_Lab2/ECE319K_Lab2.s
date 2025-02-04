@@ -51,11 +51,11 @@ Lab2:
 
 loop:
         // 15 duty
-        LDR R0, =860000 
+        LDR R0, =234000 
         BL LED_On
         BL Delay
         BL LED_Off
-        LDR R0, =700000
+        LDR R0, =1326000
         BL Delay
 
 
@@ -69,11 +69,11 @@ ml1:    BL Switch_I // switch was pressed
         BNE ml1 // no, mini loop 1
 
         // 35 duty
-iloop1: LDR R0, =10000000
+iloop1: LDR R0, =546000
         BL LED_On
         BL Delay
         BL LED_Off
-        LDR R0, =10000000
+        LDR R0, =1014000
         BL Delay
 
         BL Switch_I // checking if switch is pressed 
@@ -105,11 +105,11 @@ ml3:    BL Switch_I // switch was pressed
 
 
         // 75 duty
-iloop3: LDR R0, =100000000
+iloop3: LDR R0, =1170000
         BL LED_On
         BL Delay
         BL LED_Off
-        LDR R0, =100000000
+        LDR R0, =390000
         BL Delay
 
         BL Switch_I // checking if switch is pressed 
