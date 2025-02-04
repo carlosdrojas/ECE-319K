@@ -49,9 +49,13 @@ Lab2:
      BL   Debug_Init // your Lab3 (ignore this line while doing Lab 2)
      BL   Lab2Init
 loop:
-   
-     B    loop
 
+        LDR R0, =80000
+        BL Delay
+        B loop
+
+Delay:
+        SUBS
 
 // make switch an input, LED an output
 // PortB is already reset and powered
@@ -59,7 +63,7 @@ loop:
 // Set GPIOB_DOE31_0 for your output (be friendly)
 Lab2Init:
 // ***do not reset/power Port A or Port B, already done****
-
+         
    BX   LR
 
 
