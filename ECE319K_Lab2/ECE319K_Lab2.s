@@ -1,6 +1,6 @@
 //****************** ECE319K_Lab2.s ***************
 // Your solution to Lab 2 in assembly code
-// Author: Carlos Rojas
+// Author: Carlos Damian Rojas
 // Last Modified: 02/04/2025
 // ECE319K Spring 2025 (ECE319H students do Lab2H)
 // I/O port addresses
