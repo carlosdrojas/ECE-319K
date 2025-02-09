@@ -1,7 +1,7 @@
 // Dump.c
 // Your solution to ECE319K Lab 3 Spring 2025
-// Author: Your name
-// Last Modified: Your date
+// Author: Carlos Rojas
+// Last Modified: 02/09/2025
 
 
 #include <ti/devices/msp/msp.h>
@@ -18,6 +18,8 @@ uint32_t DebugCnt; // 0 to MAXBUF (0 is empty, MAXBUF is full)
 void Debug_Init(void){
 // students write this for Lab 3
 // This function should also initialize Timer G12, call TimerG12_Init.
+  DebugCnt = 0;
+  TimerG12_Init();
  
 }
 
@@ -28,6 +30,12 @@ void Debug_Init(void){
 uint32_t Debug_Dump(uint32_t data){
 // students write this for Lab 3
 // The software simply reads TIMG12->COUNTERREGS.CTR to get the current time in bus cycles.
+  if (DebugCnt >= MAXBUF){ 
+    return 0;
+  }
+  DataBuffer[DebugCnt] = data;
+  TimeBuffer[DebugCnt] = TIMG12->COUNTERREGS.CTR;
+  DebugCnt++;
 
   return 1; // success
 }
