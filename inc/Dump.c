@@ -146,14 +146,14 @@ uint32_t Debug_Duty(uint32_t mask){  //returns hightime(rising edge to falling e
     }
     
     // Look through all recorded data
-    for(uint32_t i = 0; i < DebugCnt; i++) {
+    for (uint32_t i = 0; i < DebugCnt; i++) {
         uint32_t maskedData = DataBuffer[i] & mask;
         
         // Check for rising edge (transition from low to high)
-        if(maskedData != 0 && prevMaskedData == 0) {
+        if (maskedData != 0 && prevMaskedData == 0) {
             lastHighStart = TimeBuffer[i];  // Start of high time
             
-            if(lastRisingTime != 0) {
+            if (lastRisingTime != 0) {
                 // Calculate period (remember timer counts down)
                 uint32_t period = lastRisingTime - TimeBuffer[i];
                 periodSum += period;
@@ -162,8 +162,8 @@ uint32_t Debug_Duty(uint32_t mask){  //returns hightime(rising edge to falling e
             lastRisingTime = TimeBuffer[i];
         }
         // Check for falling edge (transition from high to low)
-        else if(maskedData == 0 && prevMaskedData != 0) {
-            if(lastHighStart != 0) {
+        else if (maskedData == 0 && prevMaskedData != 0) {
+            if (lastHighStart != 0) {
                 // Calculate high time (from rising to falling edge)
                 uint32_t highTime = lastHighStart - TimeBuffer[i];
                 highTimeSum += highTime;
@@ -174,7 +174,7 @@ uint32_t Debug_Duty(uint32_t mask){  //returns hightime(rising edge to falling e
     }
     
     // Need at least one complete period
-    if(periodCount == 0) {
+    if (periodCount == 0) {
         return 0;
     }
     
