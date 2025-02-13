@@ -11,11 +11,11 @@
 #include "../inc/Dump.h"  // student's Lab 3
 #include <stdio.h>
 #include <string.h>
-const char Lab3EID[] ="ZZZ123"; // replace ZZZ123 with your EID here
+const char Lab3EID[] ="CDR3585"; // replace ZZZ123 with your EID here
 extern uint32_t DataBuffer[50];
 extern uint32_t TimeBuffer[50];
 uint32_t Time,Period0,Period1,Period2,Period7,Period8;
-int main(void){ // main1
+int main1(void){ // main1
   Clock_Init80MHz(0);
   LaunchPad_Init();
   UART_Init();
@@ -126,7 +126,7 @@ int main4(void){// main4
   while(1);
 }
 void Lab3Grader(void);
-int main5(void){ // main5
+int main(void){ // main5
   Debug_Init(); // calls your Lab 3 function
   Lab3Grader();
   while(1);

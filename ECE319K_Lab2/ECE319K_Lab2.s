@@ -51,10 +51,17 @@ Lab2:
 
 loop:
         // 15 duty
-        LDR R0, =234000 
+        // LDR R0, =234000 
         BL LED_On
+        //PUSH {R0}
+        BL Dump
+        //POP {R0}
+        LDR R0, =234000 
         BL Delay
         BL LED_Off
+        //PUSH {R0}
+        BL Dump
+        //POP {R0}
         LDR R0, =1326000
         BL Delay
 
@@ -69,10 +76,13 @@ ml1:    BL Switch_I // switch was pressed
         BNE ml1 // no, mini loop 1
 
         // 35 duty
-iloop1: LDR R0, =546000
+iloop1: //LDR R0, =546000
         BL LED_On
+        BL Dump
+        LDR R0, =546000
         BL Delay
         BL LED_Off
+        BL Dump
         LDR R0, =1014000
         BL Delay
 
@@ -87,10 +97,13 @@ ml2:    BL Switch_I // switch was pressed
 
 
         // 55 duty good
-iloop2: LDR R0, =860000
+iloop2: //LDR R0, =860000
         BL LED_On
+        BL Dump
+        LDR R0, =860000
         BL Delay
         BL LED_Off
+        BL Dump
         LDR R0, =700000
         BL Delay
 
@@ -105,10 +118,13 @@ ml3:    BL Switch_I // switch was pressed
 
 
         // 75 duty
-iloop3: LDR R0, =1170000
+iloop3: //LDR R0, =1170000
         BL LED_On
+        BL Dump
+        LDR R0, =1170000
         BL Delay
         BL LED_Off
+        BL Dump
         LDR R0, =390000
         BL Delay
 
