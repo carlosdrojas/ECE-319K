@@ -204,6 +204,7 @@ PB16_Init: // PB16 output
         MOVS R2,#0x02  // mask
         LDR R2, =65536
         ORRS R1,R1,R2  // friendly
+        // settings pins in DOE (Data output enable) register to make GPIO pin an output
         STR  R1,[R0]   // enable out
         BX   LR
 
