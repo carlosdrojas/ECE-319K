@@ -204,3 +204,33 @@ void Dump(void){
 // observe Theperiod
   }
 }
+
+// Lab4 specific debugging code
+void DumpLab4(void){
+  uint32_t out = GPIOB->DOUT31_0&0xC4001C7; // PB18-PB16 outputs
+  // uint32_t in = GPIOB->DIN31_0&0x0F;        // PB3-PB0 inputs
+  uint32_t data = out;                   // PB18-PB16, PB3-PB0
+  uint32_t result = Debug_Dump(data);       // calls your Lab3 function
+  if(result == 0){ // 0 means full
+    //Theperiod = Debug_Period(1<<16);        // calls your Lab3 function
+    //TheDuty = Debug_Duty(1<<16);
+   __asm volatile("bkpt; \n"); // breakpoint here
+// observe Theperiod
+  }
+}
+
+void DumpLab42(uint8_t CS){
+  uint32_t stateNum = (CS + 1) << 24; // PB18-PB16 outputs
+  uint32_t westOut = (GPIOB->DOUT31_0 & 0x1C0) << 10; // west outputs
+  uint32_t southOut = (GPIOB->DOUT31_0 & 0x7) << 8; // south outputs
+  uint32_t walkOut = ((GPIOB->DOUT31_0 & 0xC000000) >> 25) | ((GPIOB->DOUT31_0 & 0x400000) >> 22); // walk outputs
+  
+  uint32_t data = stateNum | westOut | southOut | walkOut;                   // PB18-PB16, PB3-PB0
+  uint32_t result = Debug_Dump(data);       // calls your Lab3 function
+  if(result == 0){ // 0 means full
+    //Theperiod = Debug_Period(1<<16);        // calls your Lab3 function
+    //TheDuty = Debug_Duty(1<<16);
+   __asm volatile("bkpt; \n"); // breakpoint here
+// observe Theperiod
+  }
+}
