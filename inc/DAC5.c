@@ -18,7 +18,32 @@ void DAC5_Init(void){
 // Assumes LaunchPad_Init has been called
 // I.e., PortB has already been reset and activated (do not reset PortB here again)
      // write this
-}
+
+     IOMUX->SECCFG.PINCM[PB4INDEX] = 0x81;
+     GPIOB->DOE31_0 |= 0x10; // PB3 output;
+
+     IOMUX->SECCFG.PINCM[PB3INDEX] = 0x81;
+     GPIOB->DOE31_0 |= 0x08; // PB3 output;
+
+     IOMUX->SECCFG.PINCM[PB2INDEX] = 0x81;
+     GPIOB->DOE31_0 |= 0x04; // PB2 output;
+
+     IOMUX->SECCFG.PINCM[PB1INDEX] = 0x81;
+     GPIOB->DOE31_0 |= 0x02; // PB1 output;
+
+     IOMUX->SECCFG.PINCM[PB0INDEX] = 0x81;
+     GPIOB->DOE31_0 |= 0x01; // PB3 output;
+
+
+     // inputs
+     IOMUX->SECCFG.PINCM[PB16INDEX] = 0x40081;
+
+     IOMUX->SECCFG.PINCM[PB17INDEX] = 0x40081;
+     
+     IOMUX->SECCFG.PINCM[PB18INDEX] = 0x40081;
+
+     IOMUX->SECCFG.PINCM[PB19INDEX] = 0x40081;
+     }
 
 // **************DAC5_Out*********************
 // output to DAC5
@@ -28,4 +53,6 @@ void DAC5_Init(void){
 // Note: this solution must be friendly
 void DAC5_Out(uint32_t data){
      // write this
+     GPIOB->DOUT31_0 = (GPIOB->DOUT31_0 & (~0x1F) | data);
+
 }
