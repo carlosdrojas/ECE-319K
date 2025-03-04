@@ -4,6 +4,8 @@
  * 5-bit binary-weighted DAC connected to PB4-PB0
  */
 #include <ti/devices/msp/msp.h>
+#include "../inc/LaunchPad.h"
+
 #define PB0INDEX  11 // UART0_TX  SPI1_CS2  TIMA1_C0  TIMA0_C2
 #define PB1INDEX  12 // UART0_RX  SPI1_CS3  TIMA1_C1  TIMA0_C2N
 #define PB2INDEX  14 // UART3_TX  UART2_CTS I2C1_SCL  TIMA0_C3  UART1_CTS TIMG6_C0  TIMA1_C0
@@ -32,17 +34,8 @@ void DAC5_Init(void){
      GPIOB->DOE31_0 |= 0x02; // PB1 output;
 
      IOMUX->SECCFG.PINCM[PB0INDEX] = 0x81;
-     GPIOB->DOE31_0 |= 0x01; // PB3 output;
+     GPIOB->DOE31_0 |= 0x01; // PB0 output;
 
-
-     // inputs
-     IOMUX->SECCFG.PINCM[PB16INDEX] = 0x40081;
-
-     IOMUX->SECCFG.PINCM[PB17INDEX] = 0x40081;
-     
-     IOMUX->SECCFG.PINCM[PB18INDEX] = 0x40081;
-
-     IOMUX->SECCFG.PINCM[PB19INDEX] = 0x40081;
      }
 
 // **************DAC5_Out*********************
