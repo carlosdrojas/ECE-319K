@@ -27,6 +27,7 @@ void Key_Init(void){
   IOMUX->SECCFG.PINCM[PB17INDEX] = 0x00050081; // regular GPIO input
   IOMUX->SECCFG.PINCM[PB18INDEX] = 0x00050081; // regular GPIO input
   IOMUX->SECCFG.PINCM[PB19INDEX] = 0x00050081; // regular GPIO input
+  IOMUX->SECCFG.PINCM[PB8INDEX] = 0x00050081; // regular GPIO input
   // PCB camp board
   // IOMUX->SECCFG.PINCM[PA28INDEX] = 0x00040081; // input, no pull
   // IOMUX->SECCFG.PINCM[PA27INDEX] = 0x00040081; // input, no pull
@@ -53,6 +54,6 @@ uint32_t Key_In(void){
   // return ((data>>15)&0x03) | ((data&((1<<28)|(1<<27)))>>25);
   // green board
   // return ((data>>16)&0x03) | ((data&((1<<28)|(1<<27)))>>25);
-  return  (((data) & 0xF0000) >> 16);
+  return  ( ( (data & 0x100) >> 4 ) | ((data & 0xF0000) >> 16) );
 
 }
