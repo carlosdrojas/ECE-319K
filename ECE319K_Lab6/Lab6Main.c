@@ -16,8 +16,8 @@
 #include "../inc/UART.h"
 #include "images.h"
 // Modify these two with your EIDs
-char EID1[]="abc123";  // student's EID
-char EID2[]="abc123";  // student's EID
+char EID1[]="CDR3585";  // student's EID
+char EID2[]="GOO287";  // student's EID
 void Dec2String(uint32_t n, char *p);
 // use main0 to test udivby10
 // does not need ST7735R connected

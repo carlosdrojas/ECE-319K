@@ -1,6 +1,6 @@
 // StringConversion.s
-// Student names: change this to your names or look very silly
-// Last modification date: change this to the last modification date or look very silly
+// Student names: Carlos Rojas, Grant Osinde
+// Last modification date: 3-10-2025
 // Runs on any Cortex M0
 // ECE319K lab 6 number to string conversion
 //
@@ -48,6 +48,12 @@ Test_udivby10:
 udivby10:
    PUSH {LR}
 // write this
+
+   MOVS R3, R0
+   LDR R2, =0xCCCCCCCD
+   MULS R0, R0, R2
+   LSRS R0, R0, #3
+   SUBS R1, R3, #10
 
    POP  {PC}
 

@@ -1,0 +1,8 @@
+*.*
+Debug/
+!.gitattributes
+!.gitignore
+!readme.md
+!.gitkeep
+!Lab6Grader.c
+!Lab6Main.c
