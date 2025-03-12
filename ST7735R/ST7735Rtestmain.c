@@ -150,7 +150,7 @@ int x, y, dx, dy;
 }
 
 void BookExamples(void){ // examples from the book
-  int8_t cc = 0x56; // (‘V’)
+  int8_t cc = 0x56; // (ï¿½Vï¿½)
   int32_t xx = 100;
   int16_t yy = -100;
   float zz = 3.14159265;
@@ -258,7 +258,7 @@ alif,ayh,baa,daad,daal,dhaa,dhaal,faa,ghayh,haa,ha,jeem,kaaf,khaa,laam,meem,noon
 Arabic_t Hello[]={alif,baa,ha,raa,meem,null}; // hello
 //Arabic_t WeAreHonoredByYourPresence[]={sheen,raa,faa,ta,waaw,noon,alif,null}; // we are honored by your presence
 Arabic_t WeAreHonoredByYourPresence[]={alif,noon,waaw,ta,faa,raa,sheen,null}; // we are honored by your presence
-int main(void){ // main 11
+int main11(void){ // main 11
   Clock_Init80MHz(0);
   LaunchPad_Init();
   ST7735_InitR(INITR_REDTAB);
@@ -271,6 +271,16 @@ int main(void){ // main 11
   Arabic_OutString(ArabicAlphabet);
   while(1){
 
+  }
+}
+
+int main(void) { // main 12
+  Clock_Init80MHz(0);
+  LaunchPad_Init();
+  ST7735_InitR(INITR_GREENTAB);
+  while (1) {
+    ST7735_DrawChar(30, 40, 'a', ST7735_YELLOW, ST7735_BLACK, 1);
+    Clock_Delay1ms(10);
   }
 }
 
