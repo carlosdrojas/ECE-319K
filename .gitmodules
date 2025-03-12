@@ -4,3 +4,6 @@
 [submodule "ECE319K_Lab5"]
 	path = ECE319K_Lab5
 	url = https://github.com/carlosdrojas/ECE-319KLab5_CG.git
+[submodule "ECE319K_Lab6"]
+	path = ECE319K_Lab6
+	url = git@github.com:carlosdrojas/ECE-319KLab6_CG.git
