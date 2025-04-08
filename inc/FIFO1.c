@@ -1,15 +1,17 @@
 // FIFO1.c
 // Runs on any microcontroller
 // Provide functions that implement the Software FiFo Buffer
-// Last Modified: December 23, 2024
-// Student names: change this to your names or look very silly
-// Last modification date: change this to the last modification date or look very silly
+// Last Modified: April 2025
+// Student names: Carlos Rojas, Grant Osinde
 #include <stdint.h>
 
 
 // Declare state variables for FiFo
 //        size, buffer, put and get indexes
-
+#define FIFO_SIZE 7
+static uint8_t PutI;  // index to put new
+static uint8_t GetI;  // index of oldest
+static char Fifo[FIFO_SIZE];
 
 // *********** Fifo1_Init**********
 // Initializes a software FIFO1 of a
@@ -17,6 +19,9 @@
 // put and get operations
 void Fifo1_Init(){
 //Complete this
+  PutI = 0;  // empty
+  GetI = 0;  // empty
+
  
 }
 
@@ -27,8 +32,14 @@ void Fifo1_Init(){
 //         0 for failure, FIFO1 is full
 uint32_t Fifo1_Put(char data){
   //Complete this routine
-  return 0; // replace this line with your solution
+  // replace this line with your solution
 
+  if (((PutI + 1) % FIFO_SIZE ) == GetI) {
+    return 0; // fail if full
+  } 
+  Fifo[PutI] = data;         // save in Fifo
+  PutI = (PutI + 1) % FIFO_SIZE; // next place to put
+  return 1;
 }
 
 // *********** Fifo1_Get**********
@@ -36,9 +47,15 @@ uint32_t Fifo1_Put(char data){
 // Input: none
 // Output: If the FIFO1 is empty return 0
 //         If the FIFO1 has data, remove it, and return it
-char Fifo1_Get(void){
+char Fifo1_Get(void) {
   //Complete this routine
-   return 0; // replace this line with your solution
+  // replace this line with your solution
+  if (GetI == PutI) {
+    return 0; // fail if empty
+  } 
+  char prevChar = Fifo[GetI];
+  GetI = (GetI + 1) % FIFO_SIZE; // next place to get
+  return prevChar;
 }
 
 
