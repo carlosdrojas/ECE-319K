@@ -181,6 +181,21 @@ void TimerG12_IntArm(uint32_t period, uint32_t priority){
   TIMG12->COUNTERREGS.CTRCTL |= 0x01;
 }
 
+// void TimerG12_IntArm(uint32_t period, uint32_t priority){
+//   TIMG12->GPRCM.RSTCTL = 0xB1000003;
+//   TIMG12->GPRCM.PWREN = 0x26000001;
+//   Clock_Delay(24);
+//   TIMG12->CLKSEL = 0x08;
+//   TIMG12->CLKDIV = 0;
+//   TIMG12->COUNTERREGS.LOAD = period - 1;
+//   TIMG12->COUNTERREGS.CTRCTL = 0x02;
+//   TIMG12->CPU_INT.IMASK |= 1;
+//   TIMG12->COMMONREGS.CCLKCTL = 1;
+//   NVIC->ISER[0] = 1 << 21;
+//   NVIC->IP[5] = (NVIC->IP[5]&(~0x0000FF00))|(priority<<14);
+//   TIMG12->COUNTERREGS.CTRCTL |= 0x01;
+// }
+
 // initialize G12 for continuous counting
 // simply read TIMG12->COUNTERREGS.CTR for 32 bit time
 // resolution is bus clock

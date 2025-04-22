@@ -13,3 +13,6 @@
 [submodule "ECE319K_Lab8"]
 	path = ECE319K_Lab8
 	url = git@github.com:carlosdrojas/ECE-319K_Lab8_CG.git
+[submodule "ECE319K_Lab9"]
+	path = ECE319K_Lab9
+	url = git@github.com:carlosdrojas/ECE-319K_Lab9_CG.git
